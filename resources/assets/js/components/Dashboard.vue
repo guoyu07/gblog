@@ -1,13 +1,18 @@
 <template>
     <div>
-        <navbar></navbar>
-        <sidebar></sidebar>
-        <div>
-            <router-view></router-view>
-        </div>
+        <el-row>
+            <navbar></navbar>
+        </el-row>
+        <el-row>
+            <el-col :span="4">
+                <sidebar></sidebar>
+            </el-col>
+            <el-col :span="20">
+                <router-view></router-view>
+            </el-col>
+        </el-row>
     </div>
 </template>
-
 
 <script>
     import Sidebar from './dashboard/particals/Sidebar.vue';
