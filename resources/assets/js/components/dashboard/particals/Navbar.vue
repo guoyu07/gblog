@@ -19,6 +19,7 @@
 </template>
 
 <script>
+
     export default {
         data() {
           return {
@@ -33,10 +34,15 @@
     }
 </script>
 <style lang="scss">
-    body {
-        margin: 0;
-    },
-    .navabar {
-        border-radius: 0;
+    .el-menu--horizontal .el-menu-item {
+        height: 40px;
+        line-height: 40px;
+    }
+    .el-menu--horizontal .el-submenu .el-submenu__title {
+        height: 40px;
+        line-height: 40px;
+    }
+    .el-menu--horizontal .el-submenu>.el-menu {
+        top: 45px;
     }
 </style>

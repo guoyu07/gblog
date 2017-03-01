@@ -1,27 +1,27 @@
 <template>
-
-<el-row>
-    <el-menu default-active="2" class="el-menu-vertical-demo" @open="handleOpen" @close="handleClose">
-      <el-submenu index="1">
-        <template slot="title">导航一</template>
-        <el-menu-item-group title="分组一">
-          <el-menu-item index="1-1">选项1</el-menu-item>
-          <el-menu-item index="1-2">选项2</el-menu-item>
-        </el-menu-item-group>
-        <el-menu-item-group title="分组2">
-          <el-menu-item index="1-3">选项3</el-menu-item>
-        </el-menu-item-group>
-        <el-submenu index="1-4">
-          <template slot="title">选项4</template>
-          <el-menu-item index="1-4-1">选项1</el-menu-item>
+<el-row class="full-height">
+    <el-menu default-active="2" class="" @open="handleOpen" @close="handleClose" theme="dark">
+        <el-submenu index="1">
+            <template slot="title">导航一</template>
+            <el-menu-item-group title="分组一">
+                <el-menu-item index="1-1">选项1</el-menu-item>
+                <el-menu-item index="1-2">选项2</el-menu-item>
+            </el-menu-item-group>
+            <el-menu-item-group title="分组2">
+                <el-menu-item index="1-3">选项3</el-menu-item>
+            </el-menu-item-group>
+            <el-submenu index="1-4">
+                <template slot="title">选项4</template>
+                <el-menu-item index="1-4-1">选项1</el-menu-item>
+            </el-submenu>
         </el-submenu>
-      </el-submenu>
-      <el-menu-item index="2">导航二</el-menu-item>
-      <el-menu-item index="3">导航三</el-menu-item>
+        <el-menu-item index="2">导航二</el-menu-item>
+        <el-menu-item index="3">导航三</el-menu-item>
     </el-menu>
 </el-row>
 </template>
 <script>
+
   export default {
     methods: {
       handleOpen(key, keyPath) {
@@ -33,3 +33,12 @@
     }
   }
 </script>
+
+<style lang="scss">
+    .full-height {
+        height: 100%;
+        overflow: auto;
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+</style>
