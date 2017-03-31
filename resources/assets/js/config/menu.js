@@ -1,51 +1,64 @@
 export default [
 	{
-		label: 'dashboard',
+		label: 'sidebar.dashboard',
+		icon: 'fa-dashboard',
+		url: '/dashboard/home'
+	},
+	{
+		label: 'sidebar.article',
 		icon: 'fa-dashboard',
 		child: [
 			{
-				label: 'dashboard1',
+				label: 'sidebar.articlelist',
 				icon: 'fa-circle-o',
 				url: '/dashboard/home'
 			},
 			{
-				label: 'dashboard1',
+				label: 'sidebar.articlepublish',
 				icon: 'fa-circle-o',
 				url: '/dashboard/home'
 			}
 		]
 	},
 	{
-		label: 'someoption',
+		label: 'sidebar.comment',
 		icon: 'fa-dashboard',
-		child: [
-			{
-				label: 'someoption1',
-				icon: 'fa-circle-o',
-				url: '/dashboard/home'
-			},
-			{
-				label: 'someoption2',
-				icon: 'fa-circle-o',
-				url: '/dashboard/home'
-			}
-		]
-
+		url: '/dashboard/home'
 	},
 	{
-		label: 'someoption',
+		label: 'sidebar.tag',
 		icon: 'fa-dashboard',
-		url: '/dashboard/home',
-		span: [
-			{
-				icon: 'bg-green',
-				value: 4,
-			},
-			{
-				icon: 'bg-yellow',
-				value: 4,
-			},
-		]
-	} 
+		url: '/dashboard/home'
+	},
+	{
+		label: 'sidebar.file',
+		icon: 'fa-dashboard',
+		url: '/dashboard/home'
+	},
+	{
+		label: 'sidebar.category',
+		icon: 'fa-dashboard',
+		url: '/dashboard/home'
+	},
+	{
+		label: 'sidebar.link',
+		icon: 'fa-dashboard',
+		url: '/dashboard/home'
+	},
+	{
+		label: 'sidebar.visitor',
+		icon: 'fa-dashboard',
+		url: '/dashboard/home'
+	},
+	{
+		label: 'sidebar.system',
+		icon: 'fa-dashboard',
+		url: '/dashboard/home'
+	},
+	{
+		label: 'sidebar.user',
+		icon: 'fa-dashboard',
+		url: '/dashboard/home'
+	}
 
 ]

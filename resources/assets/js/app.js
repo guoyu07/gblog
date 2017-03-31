@@ -14,29 +14,10 @@ import locales from './lang';
 import routes from './route.conf.js';
 import 'element-ui/lib/theme-default/index.css';
 
-
-/**
- * ------------------------------------------
- * load vue route 
- * 
- * ------------------------------------------
- */
-
+Vue.use(VueI18n);
 Vue.use(VueRouter);
 
-
-/**
- * ------------------------------------------
- * 
- * set vue lang
- *
- * ------------------------------------------
- * 
- */
-
-Vue.use(VueI18n);
-
-Vue.config.lang = 'zh_en';
+Vue.config.lang = 'zh_cn';
 Object.keys(locales).forEach(function (lang) {
     Vue.locale(lang, locales[lang]);
 });

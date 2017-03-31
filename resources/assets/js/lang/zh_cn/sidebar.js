@@ -2,6 +2,8 @@ export default {
     dashboard: '面板',
     user: '用户管理',
     article: '文章管理',
+    articlelist: '文章列表',
+    articlepublish: '文章发布',
     discussion: '讨论管理',
     comment: '评论管理',
     tag: '标签管理',
@@ -10,9 +12,4 @@ export default {
     link: '友链管理',
     visitor: '访问列表',
     system: '系统配置',
-    someoption2: 'someoption2',
-    someoption1: 'someoption1',
-    someoption: 'someoption',
-    dashboard1: 'dashboard',
-
 }

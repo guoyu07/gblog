@@ -12,12 +12,15 @@
 */
 
 Route::get('/', function () {
+    return view('web.index');
 });
+
 
 /* Dashboard Index */
 Route::group(['prefix' => 'dashboard'], function () {
-   Route::get('{path?}',function(){
 
+   Route::get('{path?}',function(){
        return view('dashboard.index');
    })->where('path', '[\/\w\.-]*');
+
 });
