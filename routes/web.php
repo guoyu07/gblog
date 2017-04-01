@@ -24,3 +24,5 @@ Route::group(['prefix' => 'dashboard'], function () {
    })->where('path', '[\/\w\.-]*');
 
 });
+
+Route::name('notification.index')->get('notification', 'NotificationTestController@index');
