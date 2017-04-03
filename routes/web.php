@@ -17,12 +17,10 @@ Route::get('/', function () {
 
 
 /* Dashboard Index */
-Route::group(['prefix' => 'dashboard'], function () {
+Route::group(['prefix' => 'dashboard', 'middleware' => 'auth'], function () {
 
    Route::get('{path?}',function(){
        return view('dashboard.index');
    })->where('path', '[\/\w\.-]*');
 
 });
-
-Route::name('notification.index')->get('notification', 'NotificationTestController@index');

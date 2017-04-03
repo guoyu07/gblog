@@ -12,6 +12,10 @@ export default [
             {
                 path: 'home',
                 component: require('./components/dashboard/Home.vue')
+            },
+            {
+                path: 'category',
+                component: require('./components/dashboard/Category.vue')
             }
         ]
     }

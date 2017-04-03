@@ -52,16 +52,16 @@
 
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
-              <span class="hidden-xs">godruoyi-admin</span>
+              <img :src="user.avatar ? user.avatar : '/default.png'" class="user-image" alt="User Image">
+              <span class="hidden-xs">{{ user.name }}</span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
               <li class="user-header">
-                <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                <img :src="user.avatar ? user.avatar : '/default.png'" class="img-circle" alt="User Image">
                 <p>
                   Alexander Pierce - Web Developer
-                  <small>Member since Nov. 2012</small>
+                  <small>{{ user.created_at}}</small>
                 </p>
               </li>
               <!-- Menu Body -->
@@ -96,3 +96,15 @@
     </nav>
   </header>
 </template>
+
+<script type="text/javascript">
+    
+    export default {
+      data() {
+          return {
+              user: window.User
+          }
+      }
+  };
+
+</script>

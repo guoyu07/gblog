@@ -177,6 +177,12 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        //Larvel Passport ServiceProvider
+        // Laravel\Passport\PassportServiceProvider::class,
+        // 
+        // 
+        Prettus\Repository\Providers\RepositoryServiceProvider::class,
+
     ],
 
     /*

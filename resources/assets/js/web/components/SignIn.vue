@@ -32,7 +32,7 @@
 export default {
     data() {
       return {
-        loginUrl: '/api/login',
+        loginUrl: '/api/sign_in',
         submitModel: {
           username: '',
           password: '',
@@ -41,7 +41,7 @@ export default {
         rules: {
           username: [
             { required: true, message: '请输入用户名', trigger: 'blur' },
-            { min: 3, max: 5, message: '长度在 3 到 5 个字符', trigger: 'blur' }
+            { min: 3, max: 15, message: '长度在 3 到 15 个字符', trigger: 'blur' }
           ],
           password: [
             { required: true, message: '请输入密码', trigger: 'blur' },
@@ -55,7 +55,7 @@ export default {
           let _this = this;
           _this.$refs[data].validate((valid) => {
             if (valid) {
-              _this.doSubmit(data);
+              _this.doSubmit(_this.submitModel);
             } else {
               return false;
             }
@@ -64,7 +64,14 @@ export default {
       doSubmit(data){
         let _this = this;
         _this.$http.post(_this.loginUrl, data).then((res) => {
-            location.href = '/'
+            if (res && res.data.code == 200) {
+                location.href = '/'
+            } else {
+                _this.$notify.error({
+                    title: '登录失败',
+                    message: res.message || '登录失败，稍后再试！！'
+                })
+            }
         }, response => {
             _this.$notify.error({
               title: '登陆失败',

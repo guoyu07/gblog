@@ -10,6 +10,8 @@
     window.Laravel = {		
         csrfToken: "{{ csrf_token() }}"		
     }
+    window.User = {!! Auth::user() !!}
+    window.Language = "{{ config('app.locale') }}"
   </script>
 </head>
 <body class="hold-transition skin-blue sidebar-mini">

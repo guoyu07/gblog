@@ -13,6 +13,17 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+
+//Admin
+Route::group(['middleware' => 'auth', 'namespace' => 'Admin'], function(){
+	Route::name('category.create')->post('category', 'CategoryController@create');
+	Route::name('category.modify')->post('category/{category}', 'CategoryController@modify');
+});
+
+
+//User
+Route::group([], function(){
+
+    Route::name('user.sigin')->post('sign_in', 'Home\UserController@sigin');
+
 });

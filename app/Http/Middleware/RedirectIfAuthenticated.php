@@ -18,6 +18,10 @@ class RedirectIfAuthenticated
     public function handle($request, Closure $next, $guard = null)
     {
         if (Auth::guard($guard)->check()) {
+
+            if ($request->isXmlHttpRequest()) {
+                return response()->success();
+            }
             return redirect('/home');
         }
 

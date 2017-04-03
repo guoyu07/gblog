@@ -38,7 +38,7 @@ export default [
 	{
 		label: 'sidebar.category',
 		icon: 'fa-dashboard',
-		url: '/dashboard/home'
+		url: '/dashboard/category'
 	},
 	{
 		label: 'sidebar.link',

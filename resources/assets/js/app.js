@@ -13,9 +13,11 @@ import VueRouter from 'vue-router';
 import locales from './lang';
 import routes from './route.conf.js';
 import 'element-ui/lib/theme-default/index.css';
+import VueResource from 'vue-resource';
 
 Vue.use(VueI18n);
 Vue.use(VueRouter);
+Vue.use(VueResource);
 
 Vue.config.lang = 'zh_cn';
 Object.keys(locales).forEach(function (lang) {
