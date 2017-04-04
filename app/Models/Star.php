@@ -6,34 +6,31 @@ use Illuminate\Database\Eloquent\Model;
 use Prettus\Repository\Contracts\Transformable;
 use Prettus\Repository\Traits\TransformableTrait;
 
-class Comment extends Model implements Transformable
+class Star extends Model implements Transformable
 {
     use TransformableTrait;
+
+     /**
+     * The table associated with the model.
+     *
+     * @var string
+     */
+    protected $table = 'star';
 
     protected $fillable = [];
 
     /**
-     * Comment's Post
+     * Star's Post
      * 
-     * @return BeLOngsTo
+     * @return BeLongsTo
      */
     public function post()
     {
     	return $this->belongsTo(Post::class);
     }
 
-    /**
-     * Comment's Category
-     * 
-     * @return BeLOngsTo
-     */
-    public function category()
-    {
-    	return $this->belongsTo(Category::class);
-    }
-
-    /**
-     * Comment's User
+     /**
+     * Star's User
      * 
      * @return BeLongsTo
      */
@@ -41,5 +38,4 @@ class Comment extends Model implements Transformable
     {
         return $this->belongsTo(User::class);
     }
-
 }

@@ -4,15 +4,15 @@ namespace App\Repositories\Eloquent;
 
 use Prettus\Repository\Eloquent\BaseRepository;
 use Prettus\Repository\Criteria\RequestCriteria;
-use App\Repositories\Repository\CommentRepository;
-use App\Models\Comment;
-use App\Validators\CommentValidator;
+use App\Repositories\Repository\BrowsevolmeRepository;
+use App\Models\Browsevolme;
+use App\Validators\BrowsevolmeValidator;
 
 /**
- * Class CommentRepositoryEloquent
+ * Class BrowsevolmeRepositoryEloquent
  * @package namespace App\Repositories\Eloquent;
  */
-class CommentRepositoryEloquent extends BaseRepository implements CommentRepository
+class BrowsevolmeRepositoryEloquent extends BaseRepository implements BrowsevolmeRepository
 {
     /**
      * Specify Model class name
@@ -21,7 +21,7 @@ class CommentRepositoryEloquent extends BaseRepository implements CommentReposit
      */
     public function model()
     {
-        return Comment::class;
+        return Browsevolme::class;
     }
 
     

@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Repositories\Interface;
+namespace App\Repositories\Repository;
 
 use Prettus\Repository\Contracts\RepositoryInterface;
 
 /**
  * Interface UserRepository
- * @package namespace App\Repositories\Interface;
+ * @package namespace App\Repositories\Repository;
  */
 interface UserRepository extends RepositoryInterface
 {

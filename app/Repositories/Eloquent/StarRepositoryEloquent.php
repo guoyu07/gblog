@@ -4,15 +4,15 @@ namespace App\Repositories\Eloquent;
 
 use Prettus\Repository\Eloquent\BaseRepository;
 use Prettus\Repository\Criteria\RequestCriteria;
-use App\Repositories\Repository\CommentRepository;
-use App\Models\Comment;
-use App\Validators\CommentValidator;
+use App\Repositories\Repository\StarRepository;
+use App\Models\Star;
+use App\Validators\StarValidator;
 
 /**
- * Class CommentRepositoryEloquent
+ * Class StarRepositoryEloquent
  * @package namespace App\Repositories\Eloquent;
  */
-class CommentRepositoryEloquent extends BaseRepository implements CommentRepository
+class StarRepositoryEloquent extends BaseRepository implements StarRepository
 {
     /**
      * Specify Model class name
@@ -21,7 +21,7 @@ class CommentRepositoryEloquent extends BaseRepository implements CommentReposit
      */
     public function model()
     {
-        return Comment::class;
+        return Star::class;
     }
 
     

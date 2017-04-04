@@ -18,6 +18,7 @@ use Illuminate\Http\Request;
 Route::group(['middleware' => 'auth', 'namespace' => 'Admin'], function(){
 	Route::name('category.create')->post('category', 'CategoryController@create');
 	Route::name('category.modify')->post('category/{category}', 'CategoryController@modify');
+	Route::name('category.list')->get('category', 'CategoryController@lists');
 });
 
 

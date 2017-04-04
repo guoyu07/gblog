@@ -4,7 +4,7 @@ namespace App\Repositories\Eloquent;
 
 use Prettus\Repository\Eloquent\BaseRepository;
 use Prettus\Repository\Criteria\RequestCriteria;
-use App\Repositories\Interface\PostRepository;
+use App\Repositories\Repository\PostRepository;
 use App\Models\Post;
 use App\Validators\PostValidator;
 

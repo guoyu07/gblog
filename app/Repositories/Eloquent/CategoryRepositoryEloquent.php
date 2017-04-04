@@ -4,7 +4,7 @@ namespace App\Repositories\Eloquent;
 
 use Prettus\Repository\Eloquent\BaseRepository;
 use Prettus\Repository\Criteria\RequestCriteria;
-use App\Repositories\Interface\CategoryRepository;
+use App\Repositories\Repository\CategoryRepository;
 use App\Models\Category;
 use App\Validators\CategoryValidator;
 

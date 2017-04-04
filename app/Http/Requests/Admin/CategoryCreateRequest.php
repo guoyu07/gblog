@@ -25,13 +25,13 @@ class CategoryCreateRequest extends FormRequest
     {
     	if ($this->route('category') && ($id = $this->route('category')) > 0) {
     		return [
-    			'name' => 'required|unique:category,name,' + $id
+    			'name' => 'required|unique:categorys,name,' . $id,
             	'description' => 'max:500',
             	'isstart' => 'numeric|in:0,1',
     		];
     	}
         return [
-            'name' => 'required|unique:category,name',
+            'name' => 'required|unique:categorys,name',
             'description' => 'required|max:500',
             'isstart' => 'required|numeric|in:0,1',
         ];
