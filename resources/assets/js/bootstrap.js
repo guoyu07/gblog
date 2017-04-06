@@ -24,6 +24,8 @@ window.axios.defaults.headers.common = {
     'X-Requested-With': 'XMLHttpRequest'
 };
 
+require('hover.css/css/hover.css')
+
 
 /**
  * Echo exposes an expressive API for subscribing to channels and listening
