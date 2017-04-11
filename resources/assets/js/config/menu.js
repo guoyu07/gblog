@@ -33,7 +33,7 @@ export default [
 	{
 		label: 'sidebar.file',
 		icon: 'fa-dashboard',
-		url: '/dashboard/home'
+		url: '/dashboard/filesystem'
 	},
 	{
 		label: 'sidebar.category',

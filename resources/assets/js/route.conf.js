@@ -16,6 +16,10 @@ export default [
             {
                 path: 'category',
                 component: require('./components/dashboard/Category.vue')
+            },
+            {
+                path: 'filesystem',
+                component: require('./components/dashboard/Filesystem.vue')
             }
         ]
     }

@@ -1,30 +1,29 @@
 <template>
   <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
     <section class="content-header">
       <el-breadcrumb separator="/">
-        <el-breadcrumb-item :to="{ path: '/dashboard' }">{{ $t('category.home') }}</el-breadcrumb-item>
-        <el-breadcrumb-item>{{ $t('category.manage') }}</el-breadcrumb-item>
+        <el-breadcrumb-item :to="{ path: '/dashboard' }">{{ $t('filesystem.home') }}</el-breadcrumb-item>
+        <el-breadcrumb-item>{{ $t('filesystem.manage') }}</el-breadcrumb-item>
       </el-breadcrumb>
   </section>
     <section class="content">
         <div class="box">
             <div class="box-header">
-                <h3 class="box-title">{{ $t('category.manage') }}</h3>
+                <h3 class="box-title">{{ $t('filesystem.manage') }}</h3>
                 <div class="box-tools">
-                    <el-button type="primary" class="hvr-wobble-top" icon="plus" @click="dialogFormVisible = true" size="small">{{ $t('category.new' )}}</el-button>
+                    <el-button type="primary" class="hvr-wobble-top" icon="plus" @click="dialogFormVisible = true" size="small">{{ $t('filesystem.new' )}}</el-button>
                 </div>
             </div>
           <div class="box-body table-responsive">
               <el-table :data="tableData"border style="width: 100%" v-loading.body="tableLoading">
                 <el-table-column prop="id" label="ID" sortable width="80"> </el-table-column>
-                <el-table-column prop="name" :label="$t('category.name')"></el-table-column>
-                <el-table-column prop="description" :label="$t('category.description')" show-overflow-tooltip> </el-table-column>
-                <el-table-column prop="posts_count" :label="$t('category.posts_count')"> </el-table-column>
-                <el-table-column prop="comments_count" :label="$t('category.comments_count')"> </el-table-column>
-                <el-table-column prop="stars_count" :label="$t('category.stars_count')"> </el-table-column>
-                <el-table-column prop="created_at" :label="$t('category.created_at')" show-overflow-tooltip> </el-table-column>
-                <el-table-column prop="isstart" :label="$t('category.isstart')"
+                <el-table-column prop="name" :label="$t('filesystem.name')"></el-table-column>
+                <el-table-column prop="description" :label="$t('filesystem.description')" show-overflow-tooltip> </el-table-column>
+                <el-table-column prop="posts_count" :label="$t('filesystem.posts_count')"> </el-table-column>
+                <el-table-column prop="comments_count" :label="$t('filesystem.comments_count')"> </el-table-column>
+                <el-table-column prop="stars_count" :label="$t('filesystem.stars_count')"> </el-table-column>
+                <el-table-column prop="created_at" :label="$t('filesystem.created_at')" show-overflow-tooltip> </el-table-column>
+                <el-table-column prop="isstart" :label="$t('filesystem.isstart')"
                 :filters="[{ text: 'YES', value: 'YES' }, { text: 'NO', value: 'NO' }]"
                 :filter-method="filterTag">
                   <template scope="scope">
@@ -32,7 +31,7 @@
                     <el-tag v-else type="success" close-transition>YES</el-tag>
                   </template>
                 </el-table-column>
-                <el-table-column inline-template :label="$t('category.optionname')"  width="220">
+                <el-table-column inline-template :label="$t('filesystem.optionname')"  width="220">
                   <template>
                       <el-button class="hvr-wobble-top" type="success" @click="handleEdit(row)"  size="small">{{ $t('category.edit')}}</el-button>
                       <el-button class="hvr-wobble-top"  type="danger"  @click="handleStatus(row)" size="small" v-if="row.isstart == '1'">{{ $t('category.disable')}}</el-button>
@@ -56,27 +55,6 @@
         </div>
     </section>
 
-    <el-dialog :title="$t('category.' + title)" v-model="dialogFormVisible" @close="resetForm">
-      <el-form :model="formModel" :rules="rules" ref="formModel">
-        <input type="hidden" :model="formModel.id"/>
-        <el-form-item :label="$t('category.' + title)" :label-width="formLabelWidth" prop="name">
-          <el-input v-model="formModel.name" auto-complete="off"></el-input>
-        </el-form-item>
-        <el-form-item :label="$t('category.isstart')" :label-width="formLabelWidth" prop="isstart">
-          <el-select v-model="formModel.isstart" :placeholder="$t('category.placeholder.isstart')">
-            <el-option label="YES" value="1"></el-option>
-            <el-option label="NO" value="0"></el-option>
-          </el-select>
-        </el-form-item>
-        <el-form-item :label="$t('category.description')" :label-width="formLabelWidth" prop="description">
-          <el-input type="textarea" :rows="2" :placeholder="$t('category.placeholder.description')" v-model="formModel.description"> </el-input>
-        </el-form-item>
-      </el-form>
-      <div slot="footer" class="dialog-footer">
-        <el-button @click="resetForm">{{ $t('category.clean') }}</el-button>
-        <el-button type="primary" @click="saveCategory('formModel')" v-loading="butLoading">{{ $t('category.save') }}</el-button>
-      </div>
-    </el-dialog>
   </div>
 </template>
 <script>
@@ -258,5 +236,5 @@ export default {
         })
       }
     }
-  }
+}
 </script>

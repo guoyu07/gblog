@@ -15,8 +15,8 @@ class CategoryController extends Controller
 
 	/**
 	 * create new Instance
-	 * 
-	 * @param CategoryRepository $repository 
+	 *
+	 * @param CategoryRepository $repository
 	 */
 	public function __construct(CategoryRepository $repository)
 	{
@@ -25,13 +25,16 @@ class CategoryController extends Controller
 
 	/**
 	 * Create Category Record
-	 * 
+	 *
 	 * @param  CategoryCreateRequest $request
 	 * @return Response
 	 */
 	public function create(CategoryCreateRequest $request)
 	{
-		if ($this->repository->create($request->all())) {
+		if ($this->repository->updateOrCreate(
+			['id' => $request->input('id')],
+			$request->only(['name', 'description', 'isstart']))) {
+
 			return response()->success();
 		}
 
@@ -40,19 +43,42 @@ class CategoryController extends Controller
 
 	/**
 	 * Modify Category By Request
-	 * 
-	 * @param  CategoryCreateRequest $request 
+	 *
+	 * @param  Request $request
 	 * @param  Category              $category
 	 * @return Response
 	 */
-	public function modify(CategoryCreateRequest $request, Category $category)
+	public function changeStatus(Category $category)
 	{
-		$category->update();																																																																																																																																																																																																																																																																																																																																																																																																																																																																													
+		$originStatus = 0 | $category->isstart;
+		$category->isstart = ($originStatus === 1) ? 0 : 1;
+		if ($category->save()) {
+			return response()->success();
+		}
+
+		return response()->error('Create Error');
+	}
+
+	/**
+	 * Delete Category
+	 *
+	 * @param  Category $category
+	 * @return Response
+	 */
+	public function delete(Category $category)
+	{
+		// $category->posts->delete();
+
+		if ($category->delete()) {
+			return response()->success();
+		}
+
+		return response()->error('Create Error');
 	}
 
 	/**
 	 * Category List
-	 * 
+	 *
 	 * @return Response
 	 */
 	public function lists()

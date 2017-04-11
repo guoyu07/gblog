@@ -9,6 +9,7 @@ export default {
     manage: '分类管理',
     home: '首页',
     new: '新增分类',
+    editTitle: '编辑分类',
     isstart: '是否启用',
     optionname: '操作',
     edit: '编辑',
@@ -16,6 +17,7 @@ export default {
     undisable: '启用',
     clean: '取 消',
     save: '确 定',
+    delete: '删 除',
     placeholder: {
         isstart: '请选择分类状态',
         description: '请输入描述信息',

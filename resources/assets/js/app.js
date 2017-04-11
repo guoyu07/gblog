@@ -25,6 +25,13 @@ Object.keys(locales).forEach(function (lang) {
 });
 
 
+Vue.http.interceptors.push(function(request, next) {
+  request.headers.set('X-CSRF-TOKEN', window.Laravel.csrfToken);
+  request.headers.set('X-Requested-With', 'XMLHttpRequest');
+  // continue to next interceptor
+  next();
+});
+
 /**
  * ------------------------------------------
  * Element ui component
