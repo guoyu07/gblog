@@ -25,5 +25,7 @@ export default {
     version: '版本',
     extension: '扩展',
     driver: '驱动',
-    nothing: 'No Content'
+    nothing: 'No Content',
+    home: '首页',
+    error: '获取数据失败，请稍后再试'
 }
