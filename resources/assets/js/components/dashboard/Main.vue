@@ -16,7 +16,14 @@
                 breadcrumbs: [
                     {
                         to: 'wocao',
-                        name: '分类管理'
+                        name: '首页'
+                    },
+                    {
+                        to: 'wocao',
+                        name: '首页'
+                    },
+                    {
+                        name: '卧槽'
                     }
                 ]
             }

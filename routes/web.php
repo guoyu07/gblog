@@ -16,11 +16,11 @@ Route::get('/', function () {
 });
 
 
-/* Dashboard Index */
-Route::group(['prefix' => 'dashboard', 'middleware' => 'auth'], function () {
+/* Dashboard Index   */
+Route::group(['middleware' => 'auth', 'prefix' => 'dashboard'], function () {
 
    Route::get('{path?}',function(){
-       return view('dashboard.index');
+       return view('dashboard.index2');
    })->where('path', '[\/\w\.-]*');
 
 });

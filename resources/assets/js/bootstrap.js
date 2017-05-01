@@ -24,6 +24,8 @@ window.Vue = require('vue');
 //     'X-Requested-With': 'XMLHttpRequest'
 // };
 
+// require('font-awesome')
+// require('bootstrap')
 
 require('hover.css/css/hover.css')
 

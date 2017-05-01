@@ -14,12 +14,36 @@ use Illuminate\Http\Request;
 */
 
 
-//Admin
+//Admin  
 Route::group(['middleware' => 'auth', 'namespace' => 'Admin'], function(){
-	Route::name('category.create')->post('category', 'CategoryController@create');
-	Route::name('category.changeStatus')->post('category/{category}', 'CategoryController@changeStatus');
-	Route::name('category.list')->get('category', 'CategoryController@lists');
-	Route::name('category.delete')->delete('category/{category}', 'CategoryController@delete');
+	
+	/**
+	 * Category Manage
+	 */
+	Route::group(['prefix' => 'category'], function() {
+		Route::name('category.create')->post('/', 'CategoryController@create');
+		Route::name('category.changeStatus')->post('{category}', 'CategoryController@changeStatus');
+		Route::name('category.list')->get('/', 'CategoryController@lists');
+		Route::name('category.delete')->delete('{category}', 'CategoryController@delete');
+	});
+
+
+	/**
+	 * Notificatin Count
+	 */
+	Route::group(['prefix' => 'notification'], function(){
+		Route::name('message.list')->get('message', 'NotificationController@message');
+		Route::name('messageBox.list')->get('messagebox', 'NotificationController@messageBox');
+	});
+
+	/**
+	 * User
+	 */
+	Route::group(['prefix' => 'user'], function(){
+		Route::name('user.details')->get('/', 'UserController@details');
+	});
+
+
 });
 
 
