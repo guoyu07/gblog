@@ -16,6 +16,14 @@ export default [
             {
                 path: 'category',
                 component: require('./components/dashboard/Category.vue')
+            },
+            {
+                path: 'storage',
+                component: require('./components/dashboard/Storage.vue')
+            },
+            {
+                path: 'test',
+                component: require('./components/dashboard/Test.vue')
             }
         ]
     }

@@ -1,0 +1,294 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Laravel throw_if and throw_unless Helpers - Laravel News
+</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="always">
+
+<link rel="canonical" href="https://laravel-news.com/throw_if-throw_unless"/>
+<link href='https://fonts.googleapis.com/css?family=Miriam+Libre:400,700|Source+Sans+Pro:400,700,600,400italic,700italic' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="/build/assets/css/all-e5aab8d53d.css">
+</head>
+<body id="site-layout">
+<nav class="site-nav">
+<div class="container wrapper">
+<div class="nav__header">
+<a class="nav__logo" href="https://laravel-news.com">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 91 89" style="enable-background:new 0 0 91 89;" xml:space="preserve" fill="currentColor" class="logo">
+<g>
+<path d="M86.5,0h-82C2,0,0,2,0,4.5v80C0,87,2,89,4.5,89h82c2.5,0,4.5-2,4.5-4.5v-80C91,2,89,0,86.5,0z M43.7,67.8 c-0.1,0.5-0.5,0.9-1,0.9H22.3c-1.4,0-2.5-1.1-2.5-2.5V22.4c0.1-0.5,0.5-0.9,1-0.9h3.7c0.5,0.1,0.9,0.5,0.9,1v41h17.4 c0.5,0.1,0.9,0.5,0.9,1V67.8z M72.3,67.2C72.3,67.3,72.3,67.3,72.3,67.2c0,0.9-0.6,1.5-1.4,1.5h-4.1c-0.3,0-0.7,0-1-0.2 c-0.4-0.1-0.6-0.4-0.8-0.7L43.5,30.3v26.3c-0.1,0.5-0.5,0.9-1,0.9h-3.4c0,0-0.1,0-0.1,0s0,0,0.1,0c-0.6,0-1-0.4-1-0.8V23.1 c0-0.1,0-0.1,0-0.1c0-0.8,0.6-1.4,1.4-1.4h4c0.3,0,0.7,0,1,0.2c0.4,0.1,0.6,0.4,0.8,0.7L67,60V22.4c0.1-0.5,0.5-0.9,1-0.9h3.4 c0.5,0.1,0.9,0.5,0.9,1V67.2z"/>
+</g>
+</svg>
+<p class="logo__title">Laravel News</p>
+</a>
+<button type="button" class="nav__hamburger js-menu-toggle">
+<div class="hamburger-box">
+<div class="hamburger-inner"></div>
+</div>
+</button>
+</div>
+<div class="nav__container js-menu">
+<div class="nav__search">
+<form class="search" action="/search">
+<input type="text" placeholder="Search" name="q" value="">
+<button type="submit"><svg><use xlink:href="#icon-search"></svg></button>
+</form>
+</div>
+<div class="nav__main">
+<ul>
+<li class="nav__item"><a href="https://laravel-news.com/blog">Blog</a></li>
+<li class="nav__item"><a href="/category/laravel-tutorials">Tutorials</a></li>
+<li class="nav__item"><a href="/category/laravel-packages">Packages</a></li>
+<li class="nav__item"><a href="https://laravel-news.com/podcast">Podcast</a></li>
+<li class="nav__item"><a href="https://laravel-news.com/newsletter">Newsletter</a></li>
+</ul> </div>
+<ul class="nav__social social social--lg">
+<li><a rel="nofollow" href="https://twitter.com/laravelnews" class="social__icon icon--twitter"><svg><use xlink:href="#icon-twitter"></svg></a></li>
+<li><a rel="nofollow" href="https://www.facebook.com/laravelnews" class="social__icon icon--facebook"><svg><use xlink:href="#icon-facebook"></svg></a></li>
+</ul>
+<div class="nav__footer">
+<ol>
+<li><a href="/category/laravel-tutorials">Laravel Tutorials</a></li>
+<li><a href="/category/laravel-packages">Laravel Packages</a></li>
+<li><a href="/category/laravel-books">Laravel Books</a></li>
+<li><a href="/category/interviews">The Artisan Files</a></li>
+<li><a href="/category/laravel-applications">Laravel Applications</a></li>
+<li><a href="/category/homestead">Laravel Homestead</a></li>
+</ol>
+<img src="/assets/images/dark-ln-elephant.png">
+</div>
+</div>
+</div>
+</nav>
+<main class="site-main">
+<div class="container wrapper">
+<div class="callout my2">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+ 
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2206365167577472" data-ad-slot="7516347748" data-ad-format="horizontal"></ins>
+<script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+</div>
+<div class="card post mt2">
+<div class="post__image">
+<img src="https://i1.wp.com/wp.laravel-news.com/wp-content/uploads/2017/05/throw_if.png?resize=2200%2C1125" alt="Laravel throw_if and throw_unless Helpers">
+</div>
+<div class="post__content clearfix">
+<div class="col lg-col-9">
+<header class="post__header">
+<span class="label">
+<a href="/category/laravel-5.5">Laravel 5.5</a>
+<span class="text--gray"> / </span>
+<span class="text--gray">May 15, 2017</span>
+</span>
+<h1 class="post__title">Laravel throw_if and throw_unless Helpers</h1>
+</header>
+<p><p>Coming to <a href="https://laravel-news.com/category/laravel-5.5">Laravel 5.5</a> is two new helper methods named <code>throw_if</code> and <code>throw_unless</code>, and both are designed to make it easier to throw exceptions.</p>
+<p>“Just like all the helpers, throw_if and throw_unless help facilitate clean and expressive code,” <a href="https://twitter.com/sixliv3">TJ Miller</a> said, “In particular, these two helpers could often reduce a conditional block to a single line of code. That&#8217;s pretty z.”</p>
+<p>Let’s take a look at these helpers and demonstrate how they work:</p>
+<h2>throw_if</h2>
+<p>Throw if, does exactly as it says. If the first param is a boolean and it’s “true,” then throw an exception.</p>
+<p>Here is an example use case:</p>
+<pre><code>$foo = false;
+throw_if($foo, new BarException('Foo is false'));
+// or 
+throw_if($foo, BarException::class, 'Foo is False'); 
+</code></pre>
+<p>Here is the complete function for reference:</p>
+<pre><code>function throw_if($boolean, $exception, $message = '')
+{
+    if ($boolean) {
+        throw (is_string($exception) ? new $exception($message) : $exception);
+    }
+}
+</code></pre>
+<h2>throw_unless</h2>
+<p>The reverse of <code>throw_if</code> is <code>throw_unless</code> and it performs exactly the same except it check that the first param is false and then throws an exception:</p>
+<pre><code>$foo = true;
+throw_unless($foo, new BarException('Foo is True'));
+// or
+throw_unless($foo, BarException::class, 'Foo is True');
+</code></pre>
+<p>And it’s complete signature:</p>
+<pre><code>function throw_unless($boolean, $exception, $message)
+{
+    if (! $boolean) {
+        throw (is_string($exception) ? new $exception($message) : $exception);
+    }
+}
+</code></pre>
+<p>These two helpers will be available with the 5.5 release which is due out in July and be sure to join the weekly <a href="https://laravel-news.com/newsletter">Laravel Newsletter</a>, so you&#8217;ll get notified as soon as it is officially released.</p></p>
+</div>
+<div class="col lg-col-1 lg-offset-2 ml2 lg-ml0 post__social social social--lg">
+<div class="parallel-label">Share</div>
+<a id="share-twitter" class="social__icon icon--twitter ml1 mb1" data-open-share-analytics="social,event" data-open-share="twitter" data-open-share-text="Laravel throw_if and throw_unless Helpers" data-open-share-url="https://laravel-news.com/throw_if-throw_unless" data-open-share-via="ericlbarnes" data-open-share-hashtags="">
+<svg><use xlink:href="#icon-twitter"></svg>
+</a>
+<a id="share-facebook" class="social__icon icon--facebook ml1 mb1" data-open-share-analytics="social,event" data-open-share="facebook" data-open-share-link="https://laravel-news.com/throw_if-throw_unless" data-open-share-picture="" data-open-share-caption="" data-open-share-description="Laravel throw_if and throw_unless Helpers">
+<svg><use xlink:href="#icon-facebook"></svg>
+</a>
+<a id="share-linkedin" class="social__icon icon--linkedin ml1 mb1" data-open-share-analytics="social,event" data-open-share="linkedin" data-open-share-url="https://laravel-news.com/throw_if-throw_unless" data-open-share-title="Laravel throw_if and throw_unless Helpers">
+<svg><use xlink:href="#icon-linkedin"></svg>
+</a>
+</div>
+</div> 
+<div class="post__footer">
+<div class="post__author">
+<img class="author__image" src="https://www.gravatar.com/avatar/0e7b6742f9d7e1a8a213d74b429b9e8f?s=130">
+<div class="author__content">
+<h4 class="author__name">by <a href="/@ericlbarnes">Eric L. Barnes</a></h4>
+<ul class="author__links">
+<li><span class="twitter"><a href="https://twitter.com/ericlbarnes" rel="nofollow"><svg><use xlink:href="#icon-twitter"></svg></a></span></li>
+<li><span class="facebook"><a href="https://facebook.com/ebarnes" rel="nofollow"><svg><use xlink:href="#icon-facebook"></svg></a></span></li>
+<li><span class="github"><a href="https://github.com/ericbarnes" rel="nofollow"><svg><use xlink:href="#icon-github"></svg></a></span></li>
+</ul>
+</div>
+ 
+</div>
+<ul class="tags">
+<li class="tag"><a class="tag__link" href="/tag/helpers">Helpers</a></li>
+</ul>
+</div>
+</div> 
+<div class="partners my4">
+<div class="container">
+<div class="label label--divider"><span>Laravel News Partners</span></div>
+<div class="wrapper py2">
+<div class="gutter--lg featured--logos">
+<a class="my1 mx2 logo" href="http://www.siterocket.com/?utm_source=laravelnews&amp;utm_medium=cpc&amp;utm_content=laravelnews">
+<img style="width: 100%" src="/assets/images/siterocket2.png">
+</a>
+<a class="my1 mx2 logo" href="https://bugsnag.com/?utm_source=laravelnews&amp;utm_medium=cpc&amp;utm_content=bugsnag-logo">
+<img src="https://i0.wp.com/wp.laravel-news.com/wp-content/uploads/2017/04/bugsnag-logo-blue.png">
+</a>
+<a class="my1 mx2 logo" href="https://component.io/?utm_source=laravel-news&amp;utm_campaign=laravel-news&amp;utm_medium=site-logo">
+<img src="/assets/images/component_io_subtext.png">
+</a>
+<a class="my1 mx2 logo" href="https://nexmo.com/?utm_source=laravel-news&amp;utm_medium=site&amp;utm_campaign=laravel-news">
+<img src="/assets/images/nexmo.png">
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="gutter sm-grid--2-col lg-grid--3-col my1">
+<div class="col sponsor my1 sponsor--footer">
+<div class="parallel-label parallel--left">
+<b>Sponsor</b> / <a href="/advertising" class="link--gray">Become a sponsor</a>
+</div>
+<script type="text/javascript" language="javascript" src="//c.amazon-adsystem.com/aax2/getads.js"></script>
+<script type="text/javascript" language="javascript">
+  //<![CDATA[
+    aax_getad_mpb({
+      "slot_uuid":"7e539ed6-ffed-4f7e-81eb-ccf0eafd7102"
+    });
+  //]]>
+</script>
+ 
+ 
+ 
+</div>
+<div class="col card card--red my1">
+<div class="card__header">
+<h2>Newsletter</h2>
+<img class="header__icon" src="/assets/images/min/icon-newsletter.png">
+</div>
+<div class="card__content">
+<p>Join the weekly newsletter and never miss out on new tips, tutorials, and more.</p>
+<form action="https://laravelnews.createsend.com/t/d/s/owwr/" method="post" class="newsletter-form" data-area="home">
+<input type="hidden" id="fieldhrcf" name="cm-fd-hrcf-mn" value="5">
+<input type="hidden" id="fieldhrcfdy" name="cm-fd-hrcf-dy" value="20">
+<input type="hidden" id="fieldhrcfyr" name="cm-fd-hrcf-yr" value="2017">
+<div class="input__group">
+<input class="input__sm" type="email" placeholder="Email Address" name="cm-owwr-owwr" required>
+<button class="btn btn--dark-red btn--thin btn--sm newsletter-subscribe">Subscribe</button>
+</div>
+</form>
+</div>
+</div>
+<div class="col card card--teal my1">
+<header class="card__header">
+<h2>Laravel Jobs</h2>
+<img class="header__icon" src="/assets/images/min/icon-chair.png">
+</header>
+<div class="card__content">
+<p class="mb1">
+<a href="https://larajobs.com/job/842/remote-laravel-and-vuejs-developer" class="link--white" rel="nofollow">
+Remote Laravel and Vue.js Developer
+</a>
+</p>
+<p class="mb1">
+<a href="https://larajobs.com/job/835/sr-php-developer" class="link--white" rel="nofollow">
+Sr. PHP Developer
+</a>
+</p>
+<div class="m0">
+<a href="https://larajobs.com" class="link--teal">View more Jobs</a>
+<a href="https://larajobs.com" class="link--teal right">Post a Job</a>
+</div>
+</div>
+</div>
+</div> 
+</div>
+<div class="wrapper post__pagination">
+<div class="container">
+<a href="/anvil-app" class="pagination__right">
+<svg><use xlink:href="#icon-arrow-thin-right"></svg>
+<div class="pagination__content">
+<h4>Manage your Laravel Forge Servers from iOS with Anvil</h4>
+<p>Anvil is a new iOS app created by Zack Warren that allows you to manage your Laravel Forge Servers through you iPhone&hellip;</p>
+</div>
+</a>
+</div>
+</div> 
+</main>
+<footer class="site-footer">
+<div class="container wrapper">
+<ul class="social social--lg">
+<li><a rel="nofollow" href="https://twitter.com/laravelnews" class="social__icon icon--twitter"><svg><use xlink:href="#icon-twitter"></svg></a></li>
+<li><a rel="nofollow" href="https://www.facebook.com/laravelnews" class="social__icon icon--facebook"><svg><use xlink:href="#icon-facebook"></svg></a></li>
+<li><a rel="nofollow" href="https://plus.google.com/+Laravel-news/posts" class="social__icon icon--google"><svg><use xlink:href="#icon-googleplus"></svg></a></li>
+<li><a rel="nofollow" href="https://instagram.com/laravelnews" class="social__icon icon--instagram"><svg><use xlink:href="#icon-instagram"></svg></a></li>
+<li><a rel="nofollow" href="https://www.linkedin.com/company/laravel-news" class="social__icon icon--linkedin"><svg><use xlink:href="#icon-linkedin"></svg></a></li>
+</ul>
+<nav class="footer__nav">
+<ol>
+<li><a href="/links">Links</a></li>
+<li><a href="/newsletter">Newsletter</a></li>
+<li><a href="/advertising">Advertise</a></li>
+<li><a href="/archive">Archive</a></li>
+<li><a href="https://larajobs.com" rel="nofollow">Jobs</a></li>
+<li><a href="/account" rel="nofollow">Your Account</a></li>
+<li><a href="/contact">Contact</a></li>
+</ol>
+</nav>
+<nav class="footer__nav nav--lighter">
+<ol>
+<li><a href="/category/news">News</a></li>
+<li><a href="/category/laravel-tutorials">Tutorials</a></li>
+<li><a href="/category/laravel-packages">Packages</a></li>
+<li><a href="/category/laravel-books">Books</a></li>
+<li><a href="/category/interviews">Interviews</a></li>
+<li><a href="/category/laravel-applications">Applications</a></li>
+</ol>
+</nav>
+<div class="footer__copy mt5">
+<img src="/assets/images/min/dark-ln-elephant.png">
+<p>&copy; 2012 - 2017 <a href="/">Laravel News</a> &mdash; By <a href="https://twitter.com/ericlbarnes">Eric L. Barnes</a> - A division of dotdev inc.</p>
+</div>
+<div class="footer__tribute">
+<p>Design &amp; Front-end code by</p>
+<a href="https://zaengle.com/" class="tribute__logo">
+<span>Zaengle</span>
+<img src="/assets/images/min/zaengle-logo.png">
+</a>
+</div>
+</div>
+</footer>
+</body>
+</html>

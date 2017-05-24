@@ -1,20 +1,22 @@
 <template>
 <li class="nav-header">
-	<div :class="'dropdown profile-element' + openClass"> 
+	<div class="dropdown profile-element"> 
 	    <span><img alt="image" class="img-circle" :src="user.avatar" /></span>
-	    <a data-toggle="dropdown" class="dropdown-toggle" href="#" @click="showProfile" :aria-expanded="hasShow">
+	    <a data-toggle="dropdown" class="dropdown-toggle" href="#" @click="show = !show">
 	        <span class="clear">
 	            <span class="block m-t-xs"> <strong class="font-bold">{{ user.name }}</strong></span>
 	            <span class="text-muted text-xs block">{{ user.position }} <b class="caret"></b></span>
 	        </span>
 	    </a>
-	    <ul class="dropdown-menu animated fadeInRight m-t-xs">
-	        <li><a href="profile.html">Profile</a></li>
-	        <li><a href="contacts.html">Contacts</a></li>
-	        <li><a href="mailbox.html">Mailbox</a></li>
-	        <li class="divider"></li>
-	        <li><a href="login.html">Logout</a></li>
-	    </ul>
+	    <transition name="el-fade-in-linear">
+		    <ul class="dropdown-menu animated fadeInRight m-t-xs" style="display: block;" v-show="show">
+		        <li><a href="profile.html">Profile</a></li>
+		        <li><a href="contacts.html">Contacts</a></li>
+		        <li><a href="mailbox.html">Mailbox</a></li>
+		        <li class="divider"></li>
+		        <li><a href="login.html">Logout</a></li>
+		    </ul>
+	    </transition>
 	</div>
 	<div class="logo-element">
 	    IN+
@@ -33,19 +35,7 @@ export default {
 	},
 	data () {
 		return {
-			hasShow: false,
-			openClass: ''
-		}
-	},
-	methods: {
-		showProfile () {
-			if (this.openClass || this.hasShow) {
-				this.openClass = ''
-				this.hasShow = false
-			} else {
-				this.openClass = ' open'
-				this.hasShow = true
-			}
+			show: false
 		}
 	}
 }

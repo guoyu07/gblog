@@ -14,10 +14,12 @@ import locales from './lang';
 import routes from './route.conf.js';
 import 'element-ui/lib/theme-default/index.css';
 import VueResource from 'vue-resource';
+import Vuex from 'vuex'
 
-Vue.use(VueI18n);
 Vue.use(VueRouter);
 Vue.use(VueResource);
+Vue.use(VueI18n);
+Vue.use(Vuex)
 
 Vue.config.lang = 'zh_cn';
 Object.keys(locales).forEach(function (lang) {
@@ -59,4 +61,19 @@ const router = new VueRouter({
     linkActiveClass: 'active',
     routes: routes
 });
-const app = new Vue(Vue.util.extend({ router }, App)).$mount('#app');
+
+const store = new Vuex.Store({
+    state: {
+        wocao: 0
+    },
+    mutations: {
+        increment (state) {
+            state.wocao ++
+        }
+    }
+})
+
+
+const app = new Vue(
+  Vue.util.extend({ router, store}, App),
+).$mount('#app');

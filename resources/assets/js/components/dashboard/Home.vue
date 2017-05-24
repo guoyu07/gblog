@@ -5,7 +5,7 @@
 
           <div class="col-sm-4">
               <h1 class="m-b-xs">
-                  26,900
+                  <el-button type="primary" class="hvr-wobble-top" size="small">{{ getCount }}</el-button>
               </h1>
               <small>
                   Sales in current month
@@ -315,3 +315,15 @@
   </div>
 </div>
 </template>
+
+<script>
+
+export default {
+    computed: {
+        getCount () {
+            return this.$store.state.wocao
+        }
+    }
+}
+
+</script>

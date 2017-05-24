@@ -18,14 +18,19 @@ export default [
 		url: '/dashboard/category'
 	},
 	{
+		name: 'Storage',
+		icon: 'fa-diamond',
+		url: '/dashboard/storage'
+	},
+	{
 		name: 'Graphs',
 		icon: 'fa-bar-chart-o',
 		childs: {
 			icon: 'arrow',
 			items: [
 				{
-					url: 'index.html',
-					name: 'test'
+					url: '/dashboard/test',
+					name: 'sssss'
 				},
 				{
 					url: 'index.html',

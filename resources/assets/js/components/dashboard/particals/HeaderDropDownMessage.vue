@@ -1,9 +1,10 @@
 <template>
-    <li :class="dropdown">
-        <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#" aria-expanded="false" @click="showdropdown">
+    <li class="dropdown">
+        <a class="dropdown-toggle count-info" :style="style" data-toggle="dropdown" href="#" aria-expanded="false" @click="show = !show">
             <i class="fa fa-envelope"></i>  <span class="label label-warning">{{ data.length }}</span>
         </a>
-        <ul class="dropdown-menu dropdown-messages">
+        <transition name="el-fade-in-linear">
+        <ul class="dropdown-menu dropdown-messages" v-show="show" style="display: block;">
             <template v-for="item in data">
                 <li>
                     <div class="dropdown-messages-box">
@@ -27,6 +28,7 @@
                 </div>
             </li>
         </ul>
+        </transition>
     </li>
 </template>
 
@@ -42,7 +44,7 @@ export default {
     data () {
         return {
             data: [],
-            dropdown: 'dropdown'
+            show: false
         }
     },
     created () {
@@ -52,14 +54,10 @@ export default {
             })
         }
     },
-    methods: {
-        showdropdown () {
-            if (this.dropdown == 'dropdown') {
-                this.dropdown = 'dropdown open'
-            } else {
-                this.dropdown = 'dropdown'
-            }
-        }
+    computed: {
+        style(){
+            return this.show ? 'background-color:white;' : ''
+        } 
     }
 }
 </script>

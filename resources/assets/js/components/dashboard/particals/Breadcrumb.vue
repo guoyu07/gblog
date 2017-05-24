@@ -3,7 +3,7 @@
         <div class="col-lg-10">
             <h2>{{ name }}</h2>
             <el-breadcrumb separator="/" class="breadcrumb">
-                <el-breadcrumb-item :to="home">首页</el-breadcrumb-item>
+                <el-breadcrumb-item :to="'home'">首页</el-breadcrumb-item>
                 <el-breadcrumb-item 
                     v-for="breadcrumb in breadcrumbs" 
                     :to="breadcrumb.to">

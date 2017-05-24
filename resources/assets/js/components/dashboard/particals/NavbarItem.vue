@@ -6,13 +6,13 @@
 	    		<span class="nav-label">{{ menuItem.name }}</span>
 	    		<span :class="'fa ' + parentaclass">{{ iconValue }}</span>
 	    	</router-link>
-	    	<transition name="fade">
-	    	<ul :class="'nav nav-second-level collapse ' + ifShow ">
-	    		<li v-for="child in getData">
-	    			<router-link :to="child.url">{{ child.name }}</router-link>
-	    		</li>
-	    	</ul>
-	    	</transition>
+	    	<el-collapse-transition>
+		    	<ul class="nav nav-second-level collapse in" v-show="show">
+		    		<li v-for="child in getData">
+		    			<router-link :to="child.url">{{ child.name }}</router-link>
+		    		</li>
+		    	</ul>
+	    	</el-collapse-transition>
     	</template>
     	<template v-else>
     		<router-link :to="menuItem.url | filterUrl">
@@ -28,7 +28,7 @@
 export default {
 	data () {
 		return {
-			ifShow: '',
+			show: false,
 			liClass: '',
 			parentaclass: ''
 		}
@@ -53,10 +53,10 @@ export default {
 		activeIndex (newIndex) {
 			if ((0 | newIndex) === (0 | this.index)) {
 				this.liClass ='active'
-			    this.ifShow = 'in'
+			    this.show = true
 			} else {
 				this.liClass = ''
-			    this.ifShow = ''
+			    this.show = false
 			}
 		}
 	},
@@ -64,7 +64,7 @@ export default {
 		changeStyle () {
 			if ((0 | this.activeIndex) === (0 | this.index)) {
 				this.liClass = this.liClass ? '' : 'active'
-			    this.ifShow  = this.ifShow ? '' : 'in'
+			    this.show  = !this.show
 			} else {
 				this.$emit('setActive', this.index)
 			}
