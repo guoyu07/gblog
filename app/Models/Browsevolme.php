@@ -26,7 +26,7 @@ class Browsevolme extends Model implements Transformable
      */
     public function post()
     {
-    	return $this->belongsTo(Post::class);
+        return $this->belongsTo(Post::class);
     }
 
 }

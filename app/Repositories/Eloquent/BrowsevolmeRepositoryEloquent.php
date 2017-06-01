@@ -24,8 +24,6 @@ class BrowsevolmeRepositoryEloquent extends BaseRepository implements Browsevolm
         return Browsevolme::class;
     }
 
-    
-
     /**
      * Boot up the repository, pushing criteria
      */

@@ -17,7 +17,8 @@ class Post extends Model implements Transformable
      * @var array
      */
     protected $fillable = [
-        'name', 'description', 'isstart',
+        'title', 'content', 'content_origin', 'description', 
+        'banner', 'user_id', 'category_id'
     ];
 
     /**
@@ -48,26 +49,6 @@ class Post extends Model implements Transformable
     public function browsevolme()
     {
     	return $this->hasOne(Browsevolme::class);
-    }
-
-    /**
-     * Collections
-     * 
-     * @return HasMany
-     */
-    public function collections()
-    {
-    	return $this->hasMany(Collections::class);
-    }
-
-    /**
-     * Star
-     * 
-     * @return HasMany
-     */
-    public function stars()
-    {
-    	return $this->hasMany(Star::class);
     }
 
     /**

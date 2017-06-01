@@ -59,18 +59,4 @@ class Category extends Model implements Transformable
             Post::class
         );
     }
-
-    /**
-     * Category's Stars
-     * 
-     * @return HasManyThrough
-     */
-    public function stars()
-    {
-        return $this->hasManyThrough(
-            Star::class, 
-            Post::class
-        );
-    }
-
 }

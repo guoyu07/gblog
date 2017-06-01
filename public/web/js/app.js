@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 189);
+/******/ 	return __webpack_require__(__webpack_require__.s = 191);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -52605,7 +52605,7 @@ var Component = __webpack_require__(2)(
   /* script */
   null,
   /* template */
-  __webpack_require__(178),
+  __webpack_require__(179),
   /* scopeId */
   null,
   /* cssModules */
@@ -52673,7 +52673,7 @@ Vue.http.interceptors.push(function (request, next) {
   next();
 });
 
-__webpack_require__(132);
+__webpack_require__(133);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -52820,15 +52820,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_Main_vue__ = __webpack_require__(153);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_Main_vue__ = __webpack_require__(154);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_Main_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__components_Main_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_PostDetail_vue__ = __webpack_require__(154);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_PostDetail_vue__ = __webpack_require__(155);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_PostDetail_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__components_PostDetail_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_SignIn_vue__ = __webpack_require__(155);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_SignIn_vue__ = __webpack_require__(156);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_SignIn_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__components_SignIn_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_common_Navbar_vue__ = __webpack_require__(157);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_common_Navbar_vue__ = __webpack_require__(158);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_common_Navbar_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__components_common_Navbar_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_common_Footer_vue__ = __webpack_require__(156);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_common_Footer_vue__ = __webpack_require__(157);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_common_Footer_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__components_common_Footer_vue__);
 
 
@@ -52845,7 +52845,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         components: {
             navbar: __WEBPACK_IMPORTED_MODULE_3__components_common_Navbar_vue___default.a,
             footer: __WEBPACK_IMPORTED_MODULE_4__components_common_Footer_vue___default.a,
-            default: __webpack_require__(152)
+            default: __webpack_require__(153)
         }
     }, {
         path: 'aboutme',
@@ -52881,20 +52881,21 @@ exports.push([module.i, "/*! normalize.css v7.0.0 | MIT License | github.com/nec
 /* 122 */,
 /* 123 */,
 /* 124 */,
-/* 125 */
+/* 125 */,
+/* 126 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(6)();
 exports.push([module.i, "\nbody {\n    padding: 0;\n    margin: 0;\n    height: 100%;\n}\n.sign {\n    height: 100%;\n    min-height: 750px;\n    text-align: center;\n    font-size: 14px;\n    background-color: #f1f1f1\n}\n.sign:before {\n    content: \"\";\n    display: inline-block;\n    height: 85%;\n    vertical-align: middle\n}\n.sign .disable,.sign .disable-gray {\n    opacity: .5;\n    pointer-events: none\n}\n.sign .disable-gray {\nbackground-color: #969696\n}\n.sign .tooltip-error {\nfont-size: 14px;\nline-height: 25px;\nwhite-space: nowrap;\nbackground: none\n}\n.sign .tooltip-error .tooltip-inner {\nmax-width: 280px;\ncolor: #333;\nborder: 1px solid #ea6f5a;\nbackground-color: #fff\n}\n.sign .tooltip-error .tooltip-inner i {\nposition: static;\nmargin-right: 5px;\nfont-size: 20px;\ncolor: #ea6f5a;\nvertical-align: middle\n}\n.sign .tooltip-error .tooltip-inner span {\nvertical-align: middle;\ndisplay: inline-block;\nwhite-space: normal;\nmax-width: 230px\n}\n.sign .tooltip-error.right .tooltip-arrow-border {\nborder-right-color: #ea6f5a\n}\n.sign .tooltip-error.right .tooltip-arrow-bg {\nleft: 2px;\nborder-right-color: #fff\n}\n.sign .slide-error {\nposition: relative;\npadding: 10px 0;\nborder: 1px solid #c8c8c8;\nborder-radius: 4px\n}\n.sign .slide-error i {\nposition: static!important;\nmargin-right: 10px;\ncolor: #ea6f5a!important;\nvertical-align: middle\n}\n.sign .slide-error span {\nfont-size: 15px;\nvertical-align: middle\n}\n.sign .slide-error div {\nmargin-top: 10px;\nfont-size: 13px\n}\n.sign .slide-error a {\ncolor: #3194d0\n}\n.sign .js-sign-up-container .slide-error {\nborder-bottom: none;\nborder-radius: 0\n}\n.sign .logo {\nposition: absolute;\ntop: 56px;\nmargin-left: 50px\n}\n.sign .logo img {\nwidth: 100px\n}\n.sign .main {\nwidth: 400px;\nmargin: 60px auto 0;\npadding: 50px 50px 30px;\nbackground-color: #fff;\nborder-radius: 4px;\nbox-shadow: 0 0 8px rgba(0,0,0,.1);\nvertical-align: middle;\ndisplay: inline-block\n}\n.sign .reset-title,.sign .title {\nmargin: 0 auto 50px;\npadding: 10px;\nfont-weight: 400;\ncolor: #969696\n}\n.sign .reset-title a,.sign .title a {\npadding: 10px;\ncolor: #969696\n}\n.sign .reset-title a:hover,.sign .title a:hover {\nborder-bottom: 2px solid #ea6f5a\n}\n.sign .reset-title .active,.sign .title .active {\nfont-weight: 700;\ncolor: #ea6f5a;\nborder-bottom: 2px solid #ea6f5a\n}\n.sign .reset-title b,.sign .title b {\npadding: 10px\n}\n.sign .reset-title {\ncolor: #333;\nfont-weight: 700\n}\n.sign form {\nmargin-bottom: 30px\n}\n.sign form .input-prepend {\nposition: relative;\nwidth: 100%;\nmargin-bottom: 20px\n}\n.sign form .input-prepend input {\nwidth: 100%;\nheight: 50px;\nmargin-bottom: 0;\nborder: 1px solid #c8c8c8;\nborder-radius: 0 0 4px 4px;\nbackground-color: hsla(0,0%,71%,.1);\nvertical-align: middle\n}\n.sign form .input-prepend i {\nposition: absolute;\ntop: 14px;\nleft: 10px;\nfont-size: 18px;\ncolor: #969696\n}\n.sign form .input-prepend span {\ncolor: #333\n}\n.sign form .input-prepend .ic-show {\ntop: 18px;\nleft: auto;\nright: 8px;\nfont-size: 12px\n}\n.sign form .restyle {\nmargin-bottom: 0\n}\n.sign form .restyle input {\nborder-bottom: none;\nborder-radius: 4px 4px 0 0\n}\n.sign form .no-radius input {\nborder-radius: 0\n}\n.sign form .slide-security-placeholder {\nheight: 32px;\nbackground-color: hsla(0,0%,71%,.1);\nborder-radius: 4px\n}\n.sign form .slide-security-placeholder p {\npadding-top: 7px;\ncolor: #999;\nmargin-right: -7px\n}\n.sign .overseas-btn {\nfont-size: 14px;\ncolor: #999\n}\n.sign .overseas-btn:hover {\ncolor: #2f2f2f\n}\n.sign .remember-btn {\nfloat: left;\n}\n.sign .remember-btn span {\nmargin-left: 5px;\nfont-size: 15px;\ncolor: #969696;\nvertical-align: middle\n}\n.sign .forget-btn {\nfloat: right;\nposition: relative;\nmargin: 15px 0;\nfont-size: 14px\n}\n.sign .forget-btn a {\ncolor: #999\n}\n.sign .forget-btn a:hover {\ncolor: #333\n}\n.sign .forget-btn .dropdown-menu {\ntop: 20px;\nleft: auto;\nright: 0;\nborder-radius: 4px\n}\n.sign .forget-btn .dropdown-menu a {\npadding: 10px 20px;\ncolor: #333\n}\n.sign .sign-in-button,.sign .sign-up-button {\nwidth: 100%;\npadding: 9px 18px;\nfont-size: 18px;\nborder: none;\nborder-radius: 4px;\ncolor: #fff;\nbackground: #42c02e;\ncursor: pointer;\noutline: none;\ndisplay: block;\nclear: both\n}\n.sign .sign-in-button:hover,.sign .sign-up-button:hover {\nbackground: #3db922\n}\n.sign .sign-in-button {\nbackground: #3194d0\n}\n.sign .sign-in-button:hover {\nbackground: #187cb7\n}\n.sign .btn-in-resend,.sign .btn-up-resend {\nposition: absolute;\ntop: 7px;\nright: 7px;\nwidth: 100px;\nheight: 36px;\nfont-size: 13px;\ncolor: #fff;\nbackground-color: #42c02e;\nborder-radius: 4px;\nline-height: 36px\n}\n.sign .btn-in-resend {\nbackground-color: #3194d0\n}\n.sign .sign-up-msg {\nmargin: 10px 0;\npadding: 0;\ntext-align: center;\nfont-size: 12px;\nline-height: 20px;\ncolor: #969696\n}\n.sign .sign-up-msg a,.sign .sign-up-msg a:hover {\ncolor: #3194d0\n}\n.sign .overseas input {\npadding-left: 110px!important\n}\n.sign .overseas .overseas-number {\nposition: absolute;\ntop: 0;\nleft: 0;\nwidth: 100px;\nheight: 50px;\nfont-size: 18px;\ncolor: #969696;\nborder-right: 1px solid #c8c8c8\n}\n.sign .overseas .overseas-number span {\nmargin-top: 17px;\npadding-left: 35px;\ntext-align: left;\nfont-size: 14px;\ndisplay: block\n}\n.sign .overseas .dropdown-menu {\nwidth: 100%;\nmax-height: 285px;\nfont-size: 14px;\nborder-radius: 0 0 4px 4px;\noverflow-y: auto\n}\n.sign .overseas .dropdown-menu li .nation-code {\nwidth: 65px;\ndisplay: inline-block\n}\n.sign .overseas .dropdown-menu li a {\npadding: 6px 20px;\nfont-size: 14px;\nline-height: 20px\n}\n.sign .overseas .dropdown-menu li a::hover {\ncolor: #fff;\nbackground-color: #f5f5f5\n}\n\n", ""]);
 
 /***/ }),
-/* 126 */,
 /* 127 */,
 /* 128 */,
 /* 129 */,
 /* 130 */,
 /* 131 */,
-/* 132 */
+/* 132 */,
+/* 133 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
@@ -52920,7 +52921,6 @@ if(false) {
 }
 
 /***/ }),
-/* 133 */,
 /* 134 */,
 /* 135 */,
 /* 136 */,
@@ -52939,14 +52939,15 @@ if(false) {
 /* 149 */,
 /* 150 */,
 /* 151 */,
-/* 152 */
+/* 152 */,
+/* 153 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var Component = __webpack_require__(2)(
   /* script */
   null,
   /* template */
-  __webpack_require__(165),
+  __webpack_require__(166),
   /* scopeId */
   null,
   /* cssModules */
@@ -52973,14 +52974,14 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 153 */
+/* 154 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var Component = __webpack_require__(2)(
   /* script */
   null,
   /* template */
-  __webpack_require__(182),
+  __webpack_require__(183),
   /* scopeId */
   null,
   /* cssModules */
@@ -53007,14 +53008,14 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 154 */
+/* 155 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var Component = __webpack_require__(2)(
   /* script */
   null,
   /* template */
-  __webpack_require__(158),
+  __webpack_require__(159),
   /* scopeId */
   null,
   /* cssModules */
@@ -53041,18 +53042,18 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 155 */
+/* 156 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
 /* styles */
-__webpack_require__(184)
+__webpack_require__(186)
 
 var Component = __webpack_require__(2)(
   /* script */
   __webpack_require__(102),
   /* template */
-  __webpack_require__(174),
+  __webpack_require__(175),
   /* scopeId */
   null,
   /* cssModules */
@@ -53079,14 +53080,14 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 156 */
+/* 157 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var Component = __webpack_require__(2)(
   /* script */
   null,
   /* template */
-  __webpack_require__(169),
+  __webpack_require__(170),
   /* scopeId */
   null,
   /* cssModules */
@@ -53113,14 +53114,14 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 157 */
+/* 158 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var Component = __webpack_require__(2)(
   /* script */
   null,
   /* template */
-  __webpack_require__(176),
+  __webpack_require__(177),
   /* scopeId */
   null,
   /* cssModules */
@@ -53147,7 +53148,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 158 */
+/* 159 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -53162,13 +53163,13 @@ if (false) {
 }
 
 /***/ }),
-/* 159 */,
 /* 160 */,
 /* 161 */,
 /* 162 */,
 /* 163 */,
 /* 164 */,
-/* 165 */
+/* 165 */,
+/* 166 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -53183,10 +53184,10 @@ if (false) {
 }
 
 /***/ }),
-/* 166 */,
 /* 167 */,
 /* 168 */,
-/* 169 */
+/* 169 */,
+/* 170 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -53201,11 +53202,11 @@ if (false) {
 }
 
 /***/ }),
-/* 170 */,
 /* 171 */,
 /* 172 */,
 /* 173 */,
-/* 174 */
+/* 174 */,
+/* 175 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -53304,8 +53305,8 @@ if (false) {
 }
 
 /***/ }),
-/* 175 */,
-/* 176 */
+/* 176 */,
+/* 177 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -53320,8 +53321,8 @@ if (false) {
 }
 
 /***/ }),
-/* 177 */,
-/* 178 */
+/* 178 */,
+/* 179 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -53336,10 +53337,10 @@ if (false) {
 }
 
 /***/ }),
-/* 179 */,
 /* 180 */,
 /* 181 */,
-/* 182 */
+/* 182 */,
+/* 183 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -53364,14 +53365,15 @@ if (false) {
 }
 
 /***/ }),
-/* 183 */,
-/* 184 */
+/* 184 */,
+/* 185 */,
+/* 186 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(125);
+var content = __webpack_require__(126);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -53391,11 +53393,11 @@ if(false) {
 }
 
 /***/ }),
-/* 185 */,
-/* 186 */,
 /* 187 */,
 /* 188 */,
-/* 189 */
+/* 189 */,
+/* 190 */,
+/* 191 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(80);

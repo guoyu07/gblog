@@ -24,8 +24,6 @@ class CommentRepositoryEloquent extends BaseRepository implements CommentReposit
         return Comment::class;
     }
 
-    
-
     /**
      * Boot up the repository, pushing criteria
      */

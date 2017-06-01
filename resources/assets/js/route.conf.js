@@ -24,6 +24,14 @@ export default [
             {
                 path: 'test',
                 component: require('./components/dashboard/Test.vue')
+            },
+            {
+                path: 'a/publish',
+                component: require('./components/dashboard/Test.vue')
+            },
+            {
+                path: 'a',
+                component: require('./components/dashboard/Test.vue')
             }
         ]
     }

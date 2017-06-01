@@ -19,6 +19,7 @@ class CreateCategoryTable extends Migration
             $table->string('name', 50)->index();
             $table->integer('isstart')->default(0);
             $table->string('description', 500)->nullable();
+            $table->string('avatar', 500)->nullable();
 
             $table->softDeletes();
             $table->timestamps();

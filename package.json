@@ -18,6 +18,7 @@
     "laravel-mix": "^0.11.4",
     "lodash": "^4.17.4",
     "normalize.css": "^7.0.0",
+    "qiniu-js": "^1.0.19",
     "vue": "^2.3.3",
     "vue-i18n": "^5.0.3",
     "vue-resource": "^1.3.1",

@@ -17,7 +17,9 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password', 'position'
+        'name', 'email', 'mobile', 'home_url', 'avatar', 'work_type', 'password', 
+        'github_id', 'wechat_openid', 'wechat_unionid', 'weibo_id', 'register_source', 
+        'company', 'last_actived_at'
     ];
 
     /**
@@ -40,16 +42,6 @@ class User extends Authenticatable
     }
 
     /**
-     * User's Collections
-     * 
-     * @return HasMany
-     */
-    public function collections()
-    {
-        return $this->hasMany(Collections::class);
-    }
-
-    /**
      * User;s Comments
      * 
      * @return HasMany
@@ -58,16 +50,4 @@ class User extends Authenticatable
     {
         return $this->hasMany(Comment::class);
     }
-
-    /**
-     * User's Stars
-     * 
-     * @return HasMany
-     */
-    public function stars()
-    {
-        return $this->hasMany(Star::class);
-    }
-
-
 }
