@@ -44,6 +44,16 @@ Route::group(['middleware' => 'auth', 'namespace' => 'Admin'], function(){
 	});
 
 
+	/**
+	 * COmmon api
+	 */
+	Route::group([], function(){
+
+		Route::name('file.upload.icon')->post('upload.icon', 'UploadController@iconUpload');
+
+	});
+
+
 });
 
 

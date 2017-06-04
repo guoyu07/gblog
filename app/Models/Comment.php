@@ -10,8 +10,6 @@ class Comment extends Model implements Transformable
 {
     use TransformableTrait;
 
-    protected $fillable = [];
-
     /**
      * Comment's Post
      * 

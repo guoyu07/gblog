@@ -29,12 +29,14 @@ class CategoryCreateRequest extends FormRequest
 				'id' => 'required|numeric|exists:categorys,id',
 				'name' => 'unique:categorys,name,' . $id,
 				'description' => 'max:500',
+                'avatar' => 'required|max:500',
 				'isstart' => 'numeric|in:0,1',
 			];
 		}
         return [
             'name' => 'required|unique:categorys,name',
             'description' => 'required|max:500',
+            'avatar' => 'required|max:500',
             'isstart' => 'required|numeric|in:0,1',
         ];
     }

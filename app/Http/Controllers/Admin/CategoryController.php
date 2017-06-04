@@ -33,7 +33,7 @@ class CategoryController extends Controller
 	{
 		if ($this->repository->updateOrCreate(
 			['id' => $request->input('id')],
-			$request->only(['name', 'description', 'isstart']))) {
+			$request->only(['name', 'description', 'isstart', 'avatar']))) {
 
 			return response()->success();
 		}
@@ -67,8 +67,6 @@ class CategoryController extends Controller
 	 */
 	public function delete(Category $category)
 	{
-		// $category->posts->delete();
-
 		if ($category->delete()) {
 			return response()->success();
 		}
@@ -86,7 +84,6 @@ class CategoryController extends Controller
 		$result = $this->repository
 			->withCount('posts')
 			->withCount('comments')
-			->withCount('stars')
 			->paginate();
 
 		return response()->success($result);

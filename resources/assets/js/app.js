@@ -8,9 +8,9 @@ require('./bootstrap');
 
 import Element from 'element-ui';
 import App from './App.vue';
-import VueI18n from 'vue-i18n';
+// import VueI18n from 'vue-i18n';
 import VueRouter from 'vue-router';
-import locales from './lang';
+// import locales from './lang';
 import routes from './route.conf.js';
 import 'element-ui/lib/theme-default/index.css';
 import VueResource from 'vue-resource';
@@ -18,13 +18,13 @@ import Vuex from 'vuex'
 
 Vue.use(VueRouter);
 Vue.use(VueResource);
-Vue.use(VueI18n);
+// Vue.use(VueI18n);
 Vue.use(Vuex)
 
-Vue.config.lang = 'zh_cn';
-Object.keys(locales).forEach(function (lang) {
-    Vue.locale(lang, locales[lang]);
-});
+// Vue.config.lang = 'zh_cn';
+// Object.keys(locales).forEach(function (lang) {
+//     Vue.locale(lang, locales[lang]);
+// });
 
 
 Vue.http.interceptors.push(function(request, next) {

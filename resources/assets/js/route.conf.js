@@ -22,16 +22,12 @@ export default [
                 component: require('./components/dashboard/Storage.vue')
             },
             {
-                path: 'test',
-                component: require('./components/dashboard/Test.vue')
+                path: 'publish',
+                component: require('./components/dashboard/Publish.vue')
             },
             {
-                path: 'a/publish',
-                component: require('./components/dashboard/Test.vue')
-            },
-            {
-                path: 'a',
-                component: require('./components/dashboard/Test.vue')
+                path: 'articles',
+                component: require('./components/dashboard/ArticleList.vue')
             }
         ]
     }

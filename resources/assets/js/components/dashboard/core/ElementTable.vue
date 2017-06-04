@@ -17,11 +17,24 @@
                     <div class="ibox-content">
                         <el-table :data="tableData" border style="width: 100%" v-loading.body="loading">
                             <template v-for="column in columns">
-                                <el-table-column
-                                    :prop="column.prop"
-                                    :label="column.label"
-                                    :width="column.width"
-                                ></el-table-column>
+                                
+                                <template v-if="column.prop == 'avatar' || column.prop == 'image'">
+                                    <el-table-column
+                                        :label="column.label"
+                                        :width="column.width">
+                                        <template scope="scope">
+                                            <img :src="scope.row.avatar" alt="">
+                                        </template>
+                                    </el-table-column>
+                                </template>
+                                <template v-else>
+                                    <el-table-column
+                                        :prop="column.prop"
+                                        :label="column.label"
+                                        :width="column.width"
+                                    ></el-table-column>
+                                </template>
+
                             </template>
                             <template v-if="option">
                                 <el-table-column :label="option.label" :width="option.width">
