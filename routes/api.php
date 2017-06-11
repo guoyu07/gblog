@@ -27,6 +27,10 @@ Route::group(['middleware' => 'auth', 'namespace' => 'Admin'], function(){
 		Route::name('category.delete')->delete('{category}', 'CategoryController@delete');
 	});
 
+	Route::group(['prefix' => 'article'], function () {
+		Route::name('article.publish')->post('publish', 'ArticleController@publish');
+	});
+
 
 	/**
 	 * Notificatin Count

@@ -34,13 +34,13 @@
                                     <markdown-editor 
                                         v-model="form.content" 
                                         :configs="configs"
-                                        
+                                        preview-class="markdown-body"
                                         :custom-theme="true" 
                                         ref="markdownEditor">
                                     </markdown-editor>
                                 </el-form-item>
                                 <el-form-item>
-                                    <el-button type="primary" size="large" icon="edit" style="margin: auto 50%;">发布文章</el-button>
+                                    <el-button type="primary" size="large" icon="edit" @click="publish" style="margin: auto 50%;">发布文章</el-button>
                                 </el-form-item>
                             </el-form>
                         </div>
@@ -52,7 +52,6 @@
 </template>
 
 <script>
-//preview-class="markdown-body"
     import Breadcrumb from './particals/Breadcrumb.vue'
     import Vue from 'vue'
     import VueSimplemde from 'vue-simplemde'
@@ -84,7 +83,22 @@
                       //代码高亮主题参看https://github.com/isagalaev/highlight.js
                       highlightingTheme: 'atom-one-dark'
                     }
+                },
+                api: {
+                    publish: '/api/article/publish'
                 }
+            }
+        },
+        methods: {
+            publish () {
+                this.$http.post(this.api.publish, this.form).then((res) => {
+                    if (res && res.data.code === 200) {
+                        this.$message({
+                            message: 'Publish Success',
+                            type: 'success'
+                        })
+                    }
+                })
             }
         }
     }

@@ -10,6 +10,12 @@ window._ = require('lodash');
 
 window.Vue = require('vue');
 
+/**
+ * Require defined compontents
+ * musit after vue 
+ * 
+ */
+require('./components/dashboard/layouts/index.js')
 
 /**
  * We'll load the axios HTTP library which allows us to easily issue requests
