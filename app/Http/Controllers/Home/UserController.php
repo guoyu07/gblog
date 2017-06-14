@@ -14,7 +14,6 @@ use Illuminate\Support\Facades\Auth;
  */
 class UserController extends Controller
 {
-
 	/**
      * Create a new controller instance.
      *
@@ -24,7 +23,6 @@ class UserController extends Controller
     {
         $this->middleware('guest', ['except' => 'logout']);
     }
-
 
     /**
      * Sigin User -- Home

@@ -7,8 +7,6 @@ use App\Http\Controllers\Controller;
 
 class UserController extends Controller
 {
-    
-
 	/**
 	 * Get current logined user details 
 	 * 
