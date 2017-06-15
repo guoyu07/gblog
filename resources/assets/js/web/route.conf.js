@@ -11,7 +11,7 @@ export default [
         component: Main,
         children: [
             {
-                path: '',
+                path: '/',
                 components: {
                     navbar: Navbar,
                     footer: Footer,
