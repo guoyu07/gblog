@@ -6,12 +6,12 @@
 
 require('./bootstrap');
 
-import Element from 'element-ui';
+// import Element from 'element-ui';
 
 import App from './App.vue';
 import VueRouter from 'vue-router';
 import routes from './route.conf2.js';
-import 'element-ui/lib/theme-default/index.css';
+// import 'element-ui/lib/theme-default/index.css';
 import VueResource from 'vue-resource';
 
 // 暂时用不到vuex
@@ -36,7 +36,7 @@ Vue.http.interceptors.push(function(request, next) {
  * ------------------------------------------
  */
 
-Vue.use(Element);
+// Vue.use(Element);
 
 
 // /**

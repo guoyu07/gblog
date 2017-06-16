@@ -1,7 +1,20 @@
 <template>
-    <div class="wrapper">
-        <router-view name="navbar"></router-view>
+    <div>
+        <navbar></navbar>
         <router-view></router-view>
-        <router-view name="footer"></router-view>
+        <footer-bar></footer-bar>
     </div>
 </template>
+
+<script>
+    import Navbar from './layouts/Navbar/index.js'
+    import FooterBar from './layouts/Footer/index.js'
+
+    export default {
+        components: {
+            Navbar,
+            FooterBar
+        }
+    }
+
+</script>

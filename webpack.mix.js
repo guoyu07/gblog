@@ -19,6 +19,9 @@ mix.js('resources/assets/js/app.js', 'public/js')
         'resources/assets/vendor/css/style.css',
         'node_modules/font-awesome/css/font-awesome.min.css'
     ], 'public/css/vendor.css')
+    .styles([
+        'resources/assets/vendor/css/web.css'
+    ], 'public/css/vendor-web.css')
     .copy('node_modules/font-awesome/fonts/*', 'public/fonts')
     .js('resources/assets/js/web/app.js', 'public/web/js');
 

@@ -27,8 +27,9 @@
                 </ul>
             </div>
             <ul class="nav__social social social--lg">
-                <li><a rel="nofollow" href="https://twitter.com/laravelnews" class="social__icon icon--twitter"><svg><use xlink:href="#icon-twitter"></svg></a></li>
-                <li><a rel="nofollow" href="https://www.facebook.com/laravelnews" class="social__icon icon--facebook"><svg><use xlink:href="#icon-facebook"></svg></a></li>
+                <li>
+                    <a rel="nofollow" href="https://twitter.com/laravelnews" class="social__icon icon--twitter"></a>
+                </li>
             </ul>
             <div class="nav__footer">
                 <ol>
@@ -43,5 +44,5 @@
             </div>
         </div>
     </div>
-</nav
+</nav>
 </template>
